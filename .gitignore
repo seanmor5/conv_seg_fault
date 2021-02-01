@@ -1,3 +1,4 @@
+/c_src/conv/erts
 # The directory Mix will write compiled artifacts to.
 /_build/
 
