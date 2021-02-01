@@ -57,3 +57,9 @@ Segmentation Fault (core dumped)
 ```
 
 it would always fail.
+
+You can inspect the core dump with:
+
+```shell
+$ cuda-gdb /usr/lib/erlang/erts-11.1.5/bin/beam.smp -core <core-dump-file>
+```
