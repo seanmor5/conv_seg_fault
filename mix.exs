@@ -9,7 +9,10 @@ defmodule ConvSegFault.MixProject do
       start_permanent: Mix.env() == :prod,
       deps: deps(),
       compilers: [:elixir_make] ++ Mix.compilers(),
-      make_env: %{"MIX_CURRENT_PATH" => File.cwd!()}
+      make_env: %{
+        "MIX_CURRENT_PATH" => File.cwd!(),
+        "ERTS_INCLUDE_DIR" => List.to_string(:code.root_dir()) <> "/erts/include"
+      }
     ]
   end
 
